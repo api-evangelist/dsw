@@ -6,7 +6,11 @@ apis: []
 common:
   - type: Website
     url: https://www.dsw.com
+  - type: Integrations
+    url: https://www.dsw.com/integrations
 description: >-
   Shop DSW for the best athletic shoes, sneakers, boots, sandals, accessories and
   more. Free shipping, low prices, and extra perks for VIPs. Find shoes online or
   at your nearest store.
+integrations:
+  - name: DSW
