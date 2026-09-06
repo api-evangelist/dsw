@@ -1,0 +1,13 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.dsw.com/ and https://designerbrands.com/vendors/
+plan_count: 0
+note: >-
+  DSW publishes no API plans or developer pricing of any kind, because it publishes no API.
+  It is a footwear retailer: its published pricing is retail merchandise pricing and the DSW
+  VIP Rewards loyalty tiers, neither of which is an API commercial model. There is no
+  developer portal, no "contact sales for API access" form, and no partner API price list.
+  Supplier-side integration runs over EDI through the Designer Brands vendor portal, which
+  publishes compliance requirements rather than a priced API product. Recorded as an honest
+  zero, not an unchecked field.
+plans: []

@@ -26,7 +26,22 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dsw.png
 url: 
   https://raw.githubusercontent.com/api-evangelist/dsw/refs/heads/main/apis.yml
-modified: '2026-04-28'
+created: '2026-04-28'
+modified: '2026-09-06'
+position: Consuming
+tags:
+  - Retail
+  - E-Commerce
+  - Footwear
+  - Apparel
+  - Consumer
+  - Loyalty
+  - Omnichannel
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+  - FN: 'APIs.json'
+    email: info@apis.io
 apis: []
 common:
   - type: DomainSecurity
@@ -35,11 +50,49 @@ common:
     url: https://www.linkedin.com/company/dswinc
   - type: Website
     url: https://www.dsw.com
-  - type: Integrations
-    url: https://www.dsw.com/integrations
+  - type: LLMsTxt
+    url: llms/dsw-llms.txt
+  - type: Plans
+    url: plans/dsw-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/dsw-rate-limits.yml
+  - type: Support
+    url: https://www.dsw.com/customer-service/general-questions
+  - type: TermsOfService
+    url: https://www.dsw.com/legal/web-terms
+  - type: PrivacyPolicy
+    url: https://www.dsw.com/legal/privacy-policy
 description: >-
-  Shop DSW for the best athletic shoes, sneakers, boots, sandals, accessories and
-  more. Free shipping, low prices, and extra perks for VIPs. Find shoes online or
-  at your nearest store.
+  DSW (Designer Shoe Warehouse) is the footwear and accessories retail banner of Designer
+  Brands Inc. (NYSE: DBI), selling athletic shoes, sneakers, boots, sandals and accessories
+  through roughly 500 US stores, the dsw.com storefront, a mobile app, and the DSW VIP
+  Rewards loyalty program. DSW publishes no public API, SDK, developer portal or
+  machine-readable contract: dsw.com is a client-side Angular application served by a
+  private first-party backend at api.dsw.com, and supplier-side integration runs over EDI
+  through the Designer Brands vendor portal rather than a partner API.
 integrations:
   - name: DSW
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    DSW is a footwear retailer with no developer program at all — developer.dsw.com does not
+    resolve, the only DSW-operated API host (api.dsw.com, the private storefront backend named
+    in the dsw.com homepage window.__env block) returns a hard 404 for every spec and
+    /.well-known/ path and an Akamai 403 on its routed services, and supplier integration is
+    handled over EDI through the Designer Brands vendor portal rather than a partner API.
+  evidence:
+    - url: https://api.dsw.com/openapi.json
+      status: 404
+    - url: https://api.dsw.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.dsw.com/.well-known/security.txt
+      status: 404
+    - url: https://designerbrands.com/.well-known/api-catalog
+      status: 404
+  checked: '2026-09-06'

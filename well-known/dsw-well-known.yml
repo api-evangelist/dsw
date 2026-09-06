@@ -1,0 +1,158 @@
+generated: '2026-09-06'
+method: probed
+source: live HTTPS probes of the named /.well-known/ path list on every host this record knows
+note: >-
+  No host DSW controls serves any discovery document. www.dsw.com and dsw.com are a
+  client-side Angular storefront whose router answers 200 with the SAME 20,448-byte homepage
+  shell for every unrouted path — including every /.well-known/* path, /apis.json and
+  /openapi.json — so those 200s are soft-404s, not documents, and are recorded as misses.
+  api.dsw.com (the private storefront backend named in the site's own window.__env block)
+  returns real 404s for the whole list and an Akamai 403 interstitial on its routed paths.
+  designerbrands.com (parent, Designer Brands Inc.) returns hard 404s throughout.
+  NO WellKnown or SecurityTxt pointer is emitted: nothing was served.
+hosts:
+  - host: www.dsw.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: soft-404 — HTML SPA shell byte-identical to the homepage, not a document
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/api-catalog
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/ucp.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/acp.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/aauth-resource.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/apis.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /apis.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /apis.yml
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/agent-card.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/agent.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+  - host: dsw.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/api-catalog
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/apis.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /apis.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /apis.yml
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/agent-card.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+      - path: /.well-known/agent.json
+        status: 200
+        note: soft-404 — HTML SPA shell
+  - host: api.dsw.com
+    note: >-
+      Private first-party storefront backend, discovered in the window.__env configuration
+      block served on the dsw.com homepage (services config/content/order/profile/location/
+      message/metric/payment/offer/item/identity, all rooted at https://api.dsw.com/<service>).
+      Not a published developer API — no docs, no portal, no spec; routed paths answer with an
+      Akamai 403 interstitial.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/ucp.json
+        status: 404
+      - path: /.well-known/acp.json
+        status: 404
+      - path: /.well-known/aauth-resource.json
+        status: 404
+      - path: /.well-known/apis.json
+        status: 404
+      - path: /apis.json
+        status: 404
+      - path: /apis.yml
+        status: 403
+        note: Akamai bot interstitial, not a document
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: designerbrands.com
+    note: Parent company, Designer Brands Inc.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/ucp.json
+        status: 404
+      - path: /.well-known/acp.json
+        status: 404
+      - path: /.well-known/aauth-resource.json
+        status: 404
+      - path: /.well-known/apis.json
+        status: 404
+      - path: /apis.json
+        status: 404
+      - path: /apis.yml
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404

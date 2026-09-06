@@ -1,0 +1,12 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.dsw.com/ — no developer documentation exists on any DSW-controlled host
+limit_count: 0
+note: >-
+  No rate limits are documented, because DSW documents no API. The only DSW-operated API host
+  is api.dsw.com, the private backend of the dsw.com storefront; it has no public reference
+  and its routed paths answer with an Akamai bot-management 403 rather than a rate-limit
+  response, so no X-RateLimit-*/RateLimit-*/Retry-After header set could be observed on an
+  unauthenticated response. Recorded as an honest zero.
+limits: []
+headers: []
