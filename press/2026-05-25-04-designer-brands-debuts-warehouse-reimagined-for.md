@@ -1,7 +1,9 @@
 ---
 title: Designer Brands Debuts "Warehouse Reimagined" for ...
 url: https://www.prnewswire.com/news-releases/designer-brands-debuts-warehouse-reimagined-for-enhanced-immersive-retail-store-experience-301542851.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"DSW" press release artificial intelligence'
 position: 4
 source: serpapi-google

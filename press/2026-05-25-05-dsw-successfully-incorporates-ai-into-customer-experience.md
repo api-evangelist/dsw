@@ -1,7 +1,9 @@
 ---
 title: DSW Successfully Incorporates AI into Customer Experience
 url: https://www.nice.com/blog/dsw-successfully-incorporates-ai-into-customer-experience
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"DSW" press release artificial intelligence'
 position: 5
 source: serpapi-google
